@@ -4,7 +4,7 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: BNBBlackHole
-    network: bsc
+    network: mainnet
     source:
       address: "0xA13e075Ba882Fd177453aD796476c8729EA8598B"
       abi: BNBBlackHole
