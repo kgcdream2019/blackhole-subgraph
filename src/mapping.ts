@@ -4,7 +4,7 @@ import {
   Deposit,
   Withdrawal
 } from "../generated/BNBBlackHole/BNBBlackHole"
-import { DepositData } from "../generated/schema"
+import { DepositData, WithdrawData } from "../generated/schema"
 
 export function handleDeposit(event: Deposit): void {
   // Entities can be loaded from the store using a string ID; this ID
@@ -67,4 +67,17 @@ export function handleDeposit(event: Deposit): void {
   // - contract.zeros(...)
 }
 
-export function handleWithdrawal(event: Withdrawal): void {}
+export function handleWithdrawal(event: Withdrawal): void {
+  // Entities can be loaded from the store using a string ID; this ID
+  // needs to be unique across all entities of the same type
+  let entity = WithdrawData.load(event.transaction.from.toHex())
+
+  // Entity fields can be set based on event parameters    
+  entity.nullifierHash = event.params.nullifierHash
+  entity.to = event.params.to
+  entity.relayer = event.params.relayer
+  entity.fee = event.params.fee
+
+  // Entities can be written to the store with `.save()`
+  entity.save()
+}
