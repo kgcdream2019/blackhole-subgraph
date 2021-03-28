@@ -118,13 +118,13 @@ export class WithdrawData extends Entity {
     this.set("to", Value.fromBytes(value));
   }
 
-  get nullifierHash(): BigInt {
+  get nullifierHash(): Bytes {
     let value = this.get("nullifierHash");
-    return value.toBigInt();
+    return value.toBytes();
   }
 
-  set nullifierHash(value: BigInt) {
-    this.set("nullifierHash", Value.fromBigInt(value));
+  set nullifierHash(value: Bytes) {
+    this.set("nullifierHash", Value.fromBytes(value));
   }
 
   get relayer(): Bytes {

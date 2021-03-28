@@ -71,7 +71,11 @@ export function handleWithdrawal(event: Withdrawal): void {
   // Entities can be loaded from the store using a string ID; this ID
   // needs to be unique across all entities of the same type
   let entity = WithdrawData.load(event.transaction.from.toHex())
-
+  // Entities only exist after they have been saved to the store;
+  // `null` checks allow to create entities on demand
+  if (entity == null) {
+    entity = new DepositData(event.transaction.from.toHex())
+    
   // Entity fields can be set based on event parameters    
   entity.nullifierHash = event.params.nullifierHash
   entity.to = event.params.to
