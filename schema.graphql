@@ -1,4 +1,4 @@
-type Deposit @entity {
+type DepositData @entity {
   id: ID!
   count: BigInt!
   commitment: Bytes! # bytes32
