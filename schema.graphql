@@ -3,4 +3,13 @@ type DepositData @entity {
   count: BigInt!
   commitment: Bytes! # bytes32
   leafIndex: BigInt! # uint32
+  timestamp: BigInt! # uint256
+}
+
+type WithdrawData @entity {
+  id: ID!
+  to: Bytes!
+  nullifierHash: BigInt!
+  relayer: Bytes! # bytes32
+  fee: BigInt! # uint256 
 }

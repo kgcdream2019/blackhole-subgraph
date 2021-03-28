@@ -68,4 +68,80 @@ export class DepositData extends Entity {
   set leafIndex(value: BigInt) {
     this.set("leafIndex", Value.fromBigInt(value));
   }
+
+  get timestamp(): BigInt {
+    let value = this.get("timestamp");
+    return value.toBigInt();
+  }
+
+  set timestamp(value: BigInt) {
+    this.set("timestamp", Value.fromBigInt(value));
+  }
+}
+
+export class WithdrawData extends Entity {
+  constructor(id: string) {
+    super();
+    this.set("id", Value.fromString(id));
+  }
+
+  save(): void {
+    let id = this.get("id");
+    assert(id !== null, "Cannot save WithdrawData entity without an ID");
+    assert(
+      id.kind == ValueKind.STRING,
+      "Cannot save WithdrawData entity with non-string ID. " +
+        'Considering using .toHex() to convert the "id" to a string.'
+    );
+    store.set("WithdrawData", id.toString(), this);
+  }
+
+  static load(id: string): WithdrawData | null {
+    return store.get("WithdrawData", id) as WithdrawData | null;
+  }
+
+  get id(): string {
+    let value = this.get("id");
+    return value.toString();
+  }
+
+  set id(value: string) {
+    this.set("id", Value.fromString(value));
+  }
+
+  get to(): Bytes {
+    let value = this.get("to");
+    return value.toBytes();
+  }
+
+  set to(value: Bytes) {
+    this.set("to", Value.fromBytes(value));
+  }
+
+  get nullifierHash(): BigInt {
+    let value = this.get("nullifierHash");
+    return value.toBigInt();
+  }
+
+  set nullifierHash(value: BigInt) {
+    this.set("nullifierHash", Value.fromBigInt(value));
+  }
+
+  get relayer(): Bytes {
+    let value = this.get("relayer");
+    return value.toBytes();
+  }
+
+  set relayer(value: Bytes) {
+    this.set("relayer", Value.fromBytes(value));
+  }
+
+  get fee(): BigInt {
+    let value = this.get("fee");
+    return value.toBigInt();
+  }
+
+  set fee(value: BigInt) {
+    this.set("fee", Value.fromBigInt(value));
+  }
 }
