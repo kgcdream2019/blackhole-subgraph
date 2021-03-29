@@ -26,8 +26,8 @@ export function handleDeposit(event: Deposit): void {
   // Entity fields can be set based on event parameters
   entity.commitment = event.params.commitment
   entity.leafIndex = event.params.leafIndex
-  entity.timestamp = event.params.timestamp
-
+  entity.timestamp = event.params.timestamp  
+  entity.to = event.transaction.to.toHex()
   // Entities can be written to the store with `.save()`
   entity.save()
 
