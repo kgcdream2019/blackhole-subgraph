@@ -181,3 +181,70 @@ export class WithdrawData extends Entity {
     this.set("timestamp", Value.fromBigInt(value));
   }
 }
+
+export class StaticData extends Entity {
+  constructor(id: string) {
+    super();
+    this.set("id", Value.fromString(id));
+  }
+
+  save(): void {
+    let id = this.get("id");
+    assert(id !== null, "Cannot save StaticData entity without an ID");
+    assert(
+      id.kind == ValueKind.STRING,
+      "Cannot save StaticData entity with non-string ID. " +
+        'Considering using .toHex() to convert the "id" to a string.'
+    );
+    store.set("StaticData", id.toString(), this);
+  }
+
+  static load(id: string): StaticData | null {
+    return store.get("StaticData", id) as StaticData | null;
+  }
+
+  get id(): string {
+    let value = this.get("id");
+    return value.toString();
+  }
+
+  set id(value: string) {
+    this.set("id", Value.fromString(value));
+  }
+
+  get allFee(): BigInt {
+    let value = this.get("allFee");
+    return value.toBigInt();
+  }
+
+  set allFee(value: BigInt) {
+    this.set("allFee", Value.fromBigInt(value));
+  }
+
+  get latestTimestamp(): BigInt {
+    let value = this.get("latestTimestamp");
+    return value.toBigInt();
+  }
+
+  set latestTimestamp(value: BigInt) {
+    this.set("latestTimestamp", Value.fromBigInt(value));
+  }
+
+  get depositCount(): BigInt {
+    let value = this.get("depositCount");
+    return value.toBigInt();
+  }
+
+  set depositCount(value: BigInt) {
+    this.set("depositCount", Value.fromBigInt(value));
+  }
+
+  get withdrawCount(): BigInt {
+    let value = this.get("withdrawCount");
+    return value.toBigInt();
+  }
+
+  set withdrawCount(value: BigInt) {
+    this.set("withdrawCount", Value.fromBigInt(value));
+  }
+}

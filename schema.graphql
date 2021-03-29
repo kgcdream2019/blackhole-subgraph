@@ -17,3 +17,11 @@ type WithdrawData @entity {
   fee: BigInt! # uint256 
   timestamp: BigInt! # uint256
 }
+
+type StaticData @entity {
+  id: ID!  
+  allFee: BigInt! # uint256 
+  latestTimestamp: BigInt! # uint256
+  depositCount: BigInt! # uint256
+  withdrawCount: BigInt!   
+}

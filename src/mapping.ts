@@ -4,7 +4,7 @@ import {
   Deposit,
   Withdrawal
 } from "../generated/BNBBlackHole/BNBBlackHole"
-import { DepositData, WithdrawData } from "../generated/schema"
+import { DepositData, WithdrawData, StaticData } from "../generated/schema"
 
 export function handleDeposit(event: Deposit): void {
   // Entities can be loaded from the store using a string ID; this ID
@@ -32,6 +32,22 @@ export function handleDeposit(event: Deposit): void {
   // Entities can be written to the store with `.save()`
   entity.save()
 
+  // Statics Data //  
+  let staticDataEntity = StaticData.load(event.transaction.to.toHex())
+  
+  // Entities only exist after they have been saved to the store;
+  // `null` checks allow to create entities on demand
+  if (staticDataEntity == null) {
+    staticDataEntity = new StaticData(event.transaction.to.toHex())
+
+    // Entity fields can be set using simple assignments
+    staticDataEntity.depositCount = BigInt.fromI32(0)
+  }
+
+  // BigInt and BigDecimal math are supported
+  staticDataEntity.depositCount = staticDataEntity.depositCount + BigInt.fromI32(1)
+  // Entities can be written to the store with `.save()`
+  staticDataEntity.save()
   // Note: If a handler doesn't require existing field values, it is faster
   // _not_ to load the entity from the store. Instead, create it fresh with
   // `new Entity(...)`, set the fields that should be updated and save the
