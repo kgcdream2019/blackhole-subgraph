@@ -82,6 +82,7 @@ export function handleWithdrawal(event: Withdrawal): void {
   entity.to = event.params.to
   entity.relayer = event.params.relayer
   entity.fee = event.params.fee
+  entity.timestamp  = event.block.timestamp
 
   // Entities can be written to the store with `.save()`
   entity.save()
