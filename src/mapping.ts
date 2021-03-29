@@ -28,6 +28,7 @@ export function handleDeposit(event: Deposit): void {
   entity.leafIndex = event.params.leafIndex
   entity.timestamp = event.params.timestamp  
   entity.to = event.transaction.to.toHex()
+  entity.from = event.transaction.from.toHex()
   // Entities can be written to the store with `.save()`
   entity.save()
 

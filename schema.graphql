@@ -4,6 +4,7 @@ type DepositData @entity {
   commitment: Bytes! # bytes32
   leafIndex: BigInt! # uint32
   timestamp: BigInt! # uint256
+  from: String!
   to: String! 
 }
 
