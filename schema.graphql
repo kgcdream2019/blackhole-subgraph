@@ -11,7 +11,7 @@ type DepositData @entity {
 type WithdrawData @entity {
   id: ID!
   to: Bytes!
-  from: Bytes!
+  from: String!
   nullifierHash: Bytes!
   relayer: Bytes! # bytes32
   fee: BigInt! # uint256 
