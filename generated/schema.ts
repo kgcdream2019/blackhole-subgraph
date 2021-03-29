@@ -212,24 +212,6 @@ export class StaticData extends Entity {
     this.set("id", Value.fromString(value));
   }
 
-  get allFee(): BigInt {
-    let value = this.get("allFee");
-    return value.toBigInt();
-  }
-
-  set allFee(value: BigInt) {
-    this.set("allFee", Value.fromBigInt(value));
-  }
-
-  get latestTimestamp(): BigInt {
-    let value = this.get("latestTimestamp");
-    return value.toBigInt();
-  }
-
-  set latestTimestamp(value: BigInt) {
-    this.set("latestTimestamp", Value.fromBigInt(value));
-  }
-
   get depositCount(): BigInt {
     let value = this.get("depositCount");
     return value.toBigInt();
@@ -237,14 +219,5 @@ export class StaticData extends Entity {
 
   set depositCount(value: BigInt) {
     this.set("depositCount", Value.fromBigInt(value));
-  }
-
-  get withdrawCount(): BigInt {
-    let value = this.get("withdrawCount");
-    return value.toBigInt();
-  }
-
-  set withdrawCount(value: BigInt) {
-    this.set("withdrawCount", Value.fromBigInt(value));
   }
 }
