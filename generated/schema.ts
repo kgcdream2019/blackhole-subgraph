@@ -136,6 +136,15 @@ export class WithdrawData extends Entity {
     this.set("to", Value.fromBytes(value));
   }
 
+  get from(): Bytes {
+    let value = this.get("from");
+    return value.toBytes();
+  }
+
+  set from(value: Bytes) {
+    this.set("from", Value.fromBytes(value));
+  }
+
   get nullifierHash(): Bytes {
     let value = this.get("nullifierHash");
     return value.toBytes();
