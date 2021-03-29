@@ -26,10 +26,700 @@ dataSources:
           handler: handleWithdrawal
       file: ./src/mapping.ts
   - kind: ethereum/contract
-    name: BNBBlackHole_B_10JUlb
+    name: BNBBlackHole_1BNB
     network: mainnet
     source:
       address: "0x23424857aa2CD0C77Bd201AC47804809bAb3C154"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts    
+  - kind: ethereum/contract
+    name: BNBBlackHole_10BNB
+    network: mainnet
+    source:
+      address: "0xaaC7E7f28785FC2b6165f4140dc755dB79322a07"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_100BNB
+    network: mainnet
+    source:
+      address: "0x089C518153f00E3E2a3c7B1383416B43Bc3eA182"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_1000BNB
+    network: mainnet
+    source:
+      address: "0xD914c97f3D302eF949e72326106e802f81725B3b"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_1BUSD
+    network: mainnet
+    source:
+      address: "0x0feF726F48b0e2f4ac9025F2D9C7EFC25cfa8d3F"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_10BUSD
+    network: mainnet
+    source:
+      address: "0xD752240eCdD5264fc756d4cD40eAD751e0C4821D"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_100BUSD
+    network: mainnet
+    source:
+      address: "0x8c0C101B270f33641aD5a1285c33d447527E6124"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_1000BUSD
+    network: mainnet
+    source:
+      address: "0x04b631734c1E5DC4bE98BE420d02703EBC573306"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_10000BUSD
+    network: mainnet
+    source:
+      address: "0xDBE3B694F6F42c0018E99aC25c3Eb1199C0A4D91"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_100000BUSD
+    network: mainnet
+    source:
+      address: "0x51487f8Ec6648EE9563005CA4D89f95Ed469D13c"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_10USDT
+    network: mainnet
+    source:
+      address: "0xad279F1a1A6eD5f4F704db88844E660B85fDcF0b"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_100USDT
+    network: mainnet
+    source:
+      address: "0x1c94458887339Bd80dB5C5fc71c4dE32Fa416134"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_1000USDT
+    network: mainnet
+    source:
+      address: "0x17345ca22A307a1099129c2b07c0ac509c84ec4B"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_10000USDT
+    network: mainnet
+    source:
+      address: "0xc12e1a3157d5D899bD85eBDDc38668481eBbc3A4"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_100000USDT
+    network: mainnet
+    source:
+      address: "0xB1f467239f64FEFBe0C856202cDBa7b523a8DC04"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_0.1ETHB
+    network: mainnet
+    source:
+      address: "0xc5B882514A87ADb9aa5095Ec152E57e1B24Ca7C7"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_1ETHB
+    network: mainnet
+    source:
+      address: "0x8FbE21920F4A9a9DC9C2824dbc95DfEfDa1B4ebb"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_10ETHB
+    network: mainnet
+    source:
+      address: "0x2EB8F4BbDd4c9819474066C9d77b9da038A53999"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_100EHTB
+    network: mainnet
+    source:
+      address: "0xbb9D4Bde05c2a0CdF1fc1F5C92E9598A432a9563"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_0.01BTCB
+    network: mainnet
+    source:
+      address: "0xC848e5F7DD32cE6B0DD6e10A0185c284Ad70b363"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts
+  - kind: ethereum/contract
+    name: BNBBlackHole_0.1BTCB
+    network: mainnet
+    source:
+      address: "0xe62e1a27D55A18c9Afbf1C4B76f82a5cC253C8Be"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts    
+  - kind: ethereum/contract
+    name: BNBBlackHole_1BTCB
+    network: mainnet
+    source:
+      address: "0xb108aD0e9BF7Fc0aF27556aCf4896D4F8C3e4219"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts    
+  - kind: ethereum/contract
+    name: BNBBlackHole_10BTCB
+    network: mainnet
+    source:
+      address: "0xD9e45CD0b4eCf5820488BF23af88dB0dC814B9F2"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts    
+  - kind: ethereum/contract
+    name: BNBBlackHole_1JULB
+    network: mainnet
+    source:
+      address: "0x8Ce387C98996862a7BEEeFe0471F76Fefe89E906"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts    
+  - kind: ethereum/contract
+    name: BNBBlackHole_10JULB
+    network: mainnet
+    source:
+      address: "0xf7A90c1606b9ECE5a1c48E6803C8092Dd015a660"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts    
+  - kind: ethereum/contract
+    name: BNBBlackHole_100JULB
+    network: mainnet
+    source:
+      address: "0xEA36DB5358395c5d8a3c5C84e6ED578eBC6A7418"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts    
+  - kind: ethereum/contract
+    name: BNBBlackHole_1000JULB
+    network: mainnet
+    source:
+      address: "0xA05e4fB4D9060c11f2dB4FcD9F3E7C65eb7F1bE3"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts    
+  - kind: ethereum/contract
+    name: BNBBlackHole_1000JULD
+    network: mainnet
+    source:
+      address: "0xc606D07651EDb11B53fbCD7bc65370810293dac9"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts    
+  - kind: ethereum/contract
+    name: BNBBlackHole_10000JULD
+    network: mainnet
+    source:
+      address: "0xD2FeB44b46f5C1483B8C5Dacc7fb4c80CE45B107"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts    
+  - kind: ethereum/contract
+    name: BNBBlackHole_100000JULD
+    network: mainnet
+    source:
+      address: "0xe3Ac8B997d2139ddF848d57C4a5C68c78A7a64c2"
+      abi: BNBBlackHole
+      startBlock: 5641847
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+        - Withdrawal
+      abis:
+        - name: BNBBlackHole
+          file: ./abis/BNBBlackHole.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(address,bytes32,indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts    
+  - kind: ethereum/contract
+    name: BNBBlackHole_1000000JULD
+    network: mainnet
+    source:
+      address: "0xBf85e7c21bcfC5B4bcCe09a896D5FDCF961d8DDb"
       abi: BNBBlackHole
       startBlock: 5641847
     mapping:
