@@ -78,13 +78,13 @@ export class DepositData extends Entity {
     this.set("timestamp", Value.fromBigInt(value));
   }
 
-  get to(): Bytes {
+  get to(): string {
     let value = this.get("to");
-    return value.toBytes();
+    return value.toString();
   }
 
-  set to(value: Bytes) {
-    this.set("to", Value.fromBytes(value));
+  set to(value: string) {
+    this.set("to", Value.fromString(value));
   }
 }
 
