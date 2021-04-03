@@ -31,7 +31,7 @@ dataSources:
     source:
       address: "0x23424857aa2CD0C77Bd201AC47804809bAb3C154"
       abi: BNBBlackHole
-      startBlock: 5641847
+      startBlock: 5603102
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
